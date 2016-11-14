@@ -1,0 +1,2 @@
+# gctranslator
+Interpreter szyfrów graficznych
