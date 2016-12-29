@@ -1,6 +1,5 @@
 push.sh
 .ipynb_checkpoints
-/examples/*
 /binary/*
 /found/*
 test.jpg
