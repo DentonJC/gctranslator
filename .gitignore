@@ -1,7 +1,5 @@
 push.sh
 .ipynb_checkpoints
-/binary/*
 /found/*
-/cutted/*
 test.jpg
 test.png
