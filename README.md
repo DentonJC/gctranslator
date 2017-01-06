@@ -3,8 +3,8 @@ Graphics Chipers Translator is a program for translating graphics chipers in pla
 ## DEMO 
 https://nbviewer.jupyter.org/github/DentonJC/gctranslator/blob/master/Project.ipynb
 ## DATABASE
-Of the box:
-1 HVD
+Of the box: /n
+1 HVD /n
 2 BRAILLE
 3 DAEDRIC 
 4 SPACE INVADERS 
