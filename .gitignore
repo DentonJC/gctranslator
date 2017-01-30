@@ -3,3 +3,4 @@ push.sh
 /found/*
 test.jpg
 test.png
+__pycache__

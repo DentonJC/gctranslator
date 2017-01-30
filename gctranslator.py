@@ -1,4 +1,4 @@
-import os
+import os, sys
 
 import numpy as np
 from PIL import Image, ImageDraw
@@ -10,6 +10,13 @@ def_examples_path = os.getcwd() + '/examples/'
 def_empty_threshold = 65
 def_lines_threshold = 20
 
+def input(str):
+    """
+    Redefining function for compatibility with Python 2
+
+    """
+    print(str)
+    return sys.stdin.readline().rstrip('\n')
 
 def ui(def_input_address, def_examples_path, 
        def_empty_threshold, def_lines_threshold):  # inputs check
@@ -19,7 +26,7 @@ def ui(def_input_address, def_examples_path,
 
     """
 
-    input_address = input('Enter the image address (default is ' +
+    input_address = input('Enter the image address (default is ' + 
                           def_input_address + ') :')
     if input_address == '':
         input_address = def_input_address
@@ -60,6 +67,11 @@ class Dictionaries:
                                      dictionary)})
 
     def upload_dictionary(self, path_to_dictionary):
+        """
+        Open folder with examples and upload images like dictionary.
+
+        """
+
         dictionary = {}
         if not os.path.exists(path_to_dictionary):
             print('Error. Dictionary not found.')
@@ -102,6 +114,11 @@ class Dictionaries:
         return res
 
     def get_symbol(self, input_image):
+        """
+        The function returns the result of the recognition of one symbol.
+
+        """
+
         result = {'dictionary': None, 'symbol': None, 'weight': 0}
         for name, dictionary in self.dictionaries.items():
             for letter, img in dictionary.items():
@@ -282,6 +299,7 @@ class ImageRecognition:
         no black pixels.
 
         """
+
         arr = np.array(img)
 
         for c in range(4):
@@ -321,6 +339,11 @@ class ImageRecognition:
         return True
 
     def get_result(self, dictionaries):
+        """
+        The function returns the result of the recognition of all symbols.
+
+        """
+
         if not isinstance(dictionaries, Dictionaries):
             raise ValueError('Value dictionaries must be Dictionaries instance!')
 
